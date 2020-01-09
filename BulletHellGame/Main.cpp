@@ -1,6 +1,7 @@
 #include<GL/glew.h>
 #include <GLFW/glfw3.h>
 #include "InputHandler.h";
+#include "DrawFunctions.h";
 
 int main(void)
 {
@@ -9,6 +10,8 @@ int main(void)
 	/* Initialize the library */
 	if (!glfwInit())
 		return -1;
+
+	glewInit();
 
 	/* Create a windowed mode window and its OpenGL context */
 	window = glfwCreateWindow(640, 480, "C++ Bullet Hell Game", NULL, NULL);
@@ -37,6 +40,10 @@ int main(void)
 
 		/* Poll for and process events */
 		glfwPollEvents();
+
+		glUseProgram(shaderProgram);
+		glBindVertexArray(VAO);
+		glDrawArrays(GL_TRIANGLES, 0, 3);
 	}
 
 	glfwTerminate();
