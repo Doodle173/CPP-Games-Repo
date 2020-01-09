@@ -1,3 +1,4 @@
+#include<GL/glew.h>
 #include <GLFW/glfw3.h>
 #include "InputHandler.h";
 
@@ -14,7 +15,6 @@ int main(void)
 
 	//Create Key Register
 	glfwSetKeyCallback(window, keyHandler);
-	glfwSetMouseButtonCallback(window, mouseClickHandler);
 
 	if (!window)
 	{

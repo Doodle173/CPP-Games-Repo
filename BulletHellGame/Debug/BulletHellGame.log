@@ -1,3 +1,2 @@
-﻿  Main.cpp
-C:\Users\Daniel\Desktop\Programming Things\C++ Projects\BulletHellGame\Main.cpp(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  BulletHellGame.vcxproj -> C:\Users\Daniel\Desktop\Programming Things\C++ Projects\BulletHellGame\Debug\BulletHellGame.exe
+﻿LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  BulletHellGame.vcxproj -> Y:\Visual Studio Projects\CPP-Games-Repo\BulletHellGame\Debug\BulletHellGame.exe
