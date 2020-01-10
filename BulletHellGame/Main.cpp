@@ -11,8 +11,6 @@ int main(void)
 	if (!glfwInit())
 		return -1;
 
-	glewInit();
-
 	/* Create a windowed mode window and its OpenGL context */
 	window = glfwCreateWindow(640, 480, "C++ Bullet Hell Game", NULL, NULL);
 
@@ -28,7 +26,6 @@ int main(void)
 	/* Make the window's context current */
 	glfwMakeContextCurrent(window);
 
-
 	/* Loop until the user closes the window */
 	while (!glfwWindowShouldClose(window))
 	{
@@ -41,9 +38,7 @@ int main(void)
 		/* Poll for and process events */
 		glfwPollEvents();
 
-		glUseProgram(shaderProgram);
-		glBindVertexArray(VAO);
-		glDrawArrays(GL_TRIANGLES, 0, 3);
+		draw();
 	}
 
 	glfwTerminate();
