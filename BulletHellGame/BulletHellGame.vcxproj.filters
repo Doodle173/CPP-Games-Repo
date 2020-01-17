@@ -23,7 +23,7 @@
     <ClInclude Include="InputHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DrawFunctions.h">
+    <ClInclude Include="Shaders.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

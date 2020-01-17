@@ -1,7 +1,7 @@
 #include<GL/glew.h>
 #include <GLFW/glfw3.h>
+#include "Shaders.h";
 #include "InputHandler.h";
-#include "DrawFunctions.h";
 
 int main(void)
 {
@@ -15,7 +15,7 @@ int main(void)
 	window = glfwCreateWindow(640, 480, "C++ Bullet Hell Game", NULL, NULL);
 
 	//Create Key Register
-	glfwSetKeyCallback(window, keyHandler);
+	//glfwSetKeyCallback(window, keyHandler);
 
 	if (!window)
 	{
@@ -27,18 +27,25 @@ int main(void)
 	glfwMakeContextCurrent(window);
 
 	/* Loop until the user closes the window */
+
+	//init GLEW
+	glewInit();
+	//load shader whatnot
+	loadShaders();
 	while (!glfwWindowShouldClose(window))
 	{
 		/* Render here */
-		glClear(GL_COLOR_BUFFER_BIT);
+		//Put all rendering in between glClear, and glfwSwapBuffers
+		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 
+		glClear(GL_COLOR_BUFFER_BIT);
 		/* Swap front and back buffers */
+		fadeEffect();
+		
 		glfwSwapBuffers(window);
 
 		/* Poll for and process events */
 		glfwPollEvents();
-
-		draw();
 	}
 
 	glfwTerminate();
