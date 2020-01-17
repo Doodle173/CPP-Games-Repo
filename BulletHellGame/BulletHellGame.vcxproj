@@ -130,9 +130,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Shader.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Shaders.h" />
+    <ClInclude Include="resource1.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="SimpleDrawing.h" />
     <ClInclude Include="InputHandler.h" />
   </ItemGroup>
   <ItemGroup>
