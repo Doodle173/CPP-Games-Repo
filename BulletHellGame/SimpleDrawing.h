@@ -1,9 +1,6 @@
 #include<iostream>
 #include<GL/glew.h>
 #include <GLFW/glfw3.h>
-
-#include "Shader.h";
-
 	//float order:
 	//x, y, z
 	float verts[] = {

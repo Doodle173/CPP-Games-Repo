@@ -1,16 +1,8 @@
 #include "Shader.h"
 
-#include<GL/glew.h>
-#include <GLFW/glfw3.h>
-
-#include <string>
-#include <fstream>
-#include <sstream>
-#include <iostream>
-
 unsigned int ID;
 
-void Shader(const char* vertexPath, const char* fragmentPath) {
+Shader::Shader(const char* vertexPath, const char* fragmentPath) {
 	//retrieve vertex/fragment source from filepath
 	std::string vertexCode;
 	std::string fragmentCode;
@@ -36,7 +28,7 @@ void Shader(const char* vertexPath, const char* fragmentPath) {
 		fragmentCode = fShaderStream.str();
 	}
 	catch (std::ifstream::failure e) {
-		std::cout << "ERROR::Shader::FILE_NOT_SUCCESFULLY_READ\n" << std::endl;
+		std::cout << "ERROR: SHADERS HAVE NOT BEEN READ\n" << std::endl;
 	}
 	const char* vShaderCode = vertexCode.c_str();
 	const char* fShaderCode = fragmentCode.c_str();
@@ -54,7 +46,7 @@ void Shader(const char* vertexPath, const char* fragmentPath) {
 	glGetShaderiv(vertex, GL_COMPILE_STATUS, &success);
 	if (!success) {
 		glGetShaderInfoLog(vertex, 512, NULL, infoLog);
-		std::cout << "ERROR::Shader::Vertex::COMPILATION_FAILED\n" << infoLog << std::endl;
+		std::cout << "ERROR: VERTEX SHADER FAILED TO COMPILE\n" << infoLog << std::endl;
 	}
 
 	//compile fragment shader
@@ -63,7 +55,7 @@ void Shader(const char* vertexPath, const char* fragmentPath) {
 	glCompileShader(fragment);
 	if (!success) {
 		glGetShaderInfoLog(fragment, 512, NULL, infoLog);
-		std::cout << "ERROR::Shader::Fragment::COMPILATION_FAILED\n" << infoLog << std::endl;
+		std::cout << "ERROR: FRAGMENT SHADER FAILED TO COMPILE\n" << infoLog << std::endl;
 	}
 	
 	
@@ -83,7 +75,7 @@ void Shader(const char* vertexPath, const char* fragmentPath) {
 	glDeleteShader(fragment);
 }
 
-void use() {
+void Shader::Use() {
 	glUseProgram(ID);
 }
 
