@@ -1,21 +1,20 @@
 #include<GL/glew.h>
 #include <GLFW/glfw3.h>
-#include "Shaders.h";
 #include "InputHandler.h";
+#include "SimpleDrawing.h";
+#include "Shader.h";
+
 
 int main(void)
 {
 	GLFWwindow* window;
-
 	/* Initialize the library */
 	if (!glfwInit())
 		return -1;
 
-	/* Create a windowed mode window and its OpenGL context */
+	//create glfw/openGL window, properties are above window object
+	glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
 	window = glfwCreateWindow(640, 480, "C++ Bullet Hell Game", NULL, NULL);
-
-	//Create Key Register
-	//glfwSetKeyCallback(window, keyHandler);
 
 	if (!window)
 	{
@@ -30,8 +29,12 @@ int main(void)
 
 	//init GLEW
 	glewInit();
-	//load shader whatnot
-	loadShaders();
+
+	//register keyhandler
+	glfwSetKeyCallback(window, keyHandler);
+
+	//Shader testShader("\BulletHellGame\Debug\vertShader.vs", "\BulletHellGame\Debug\fragShader.vs");
+
 	while (!glfwWindowShouldClose(window))
 	{
 		/* Render here */
@@ -40,7 +43,8 @@ int main(void)
 
 		glClear(GL_COLOR_BUFFER_BIT);
 		/* Swap front and back buffers */
-		fadeEffect();
+
+		drawTriangle();
 		
 		glfwSwapBuffers(window);
 
