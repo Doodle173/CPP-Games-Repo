@@ -52,9 +52,11 @@ Shader(const char* vertexPath, const char* fragmentPath) {
 		catch (std::ifstream::failure e) {
 			std::cout << "ERROR: SHADERS HAVE NOT BEEN READ\n" << std::endl;
 		}
+		//const char* vShaderCode = vertexCode.c_str();
+		//const char* fShaderCode = fragmentCode.c_str();
+
 		const char* vShaderCode = vertexCode.c_str();
 		const char* fShaderCode = fragmentCode.c_str();
-
 
 		//end of file reading
 

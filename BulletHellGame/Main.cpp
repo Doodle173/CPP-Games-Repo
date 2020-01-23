@@ -34,9 +34,6 @@ int main(void)
 	glfwSetKeyCallback(window, keyHandler);
 
 	//shader that dictates color based off each vertex point
-	Shader testShader("vertShader.vs", "fragShader.fs");
-	//fade shader
-	Shader fadeShader("vertShader.vs", "weirdShader.fs");
 
 	createAttribs();
 
@@ -44,18 +41,13 @@ int main(void)
 	
 		/* Render here */
 		//Put all rendering in between glClear, and glfwSwapBuffers
-		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+		
+		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
-
-		float timeValue = glfwGetTime();
-		float colorValue = (sin(timeValue) / 2.0f) + 0.5f;
-		int vertexColorLocation = glGetUniformLocation(fadeShader.ID, "ourColor");
-		fadeShader.use();
-		glUniform4f(vertexColorLocation, 0.0f, colorValue, 0.0f, 1.0f);
-		fadeShader.use();
+		fadeEffect();
 		drawTriangle();
-		
+
 		glfwSwapBuffers(window);
 
 		/* Poll for and process events */
