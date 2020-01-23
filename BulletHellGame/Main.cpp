@@ -33,16 +33,18 @@ int main(void)
 	//register keyhandler
 	glfwSetKeyCallback(window, keyHandler);
 
-	Shader testShader("vertShader.vs", "fragShader.fs");
+	Shader testShader("vshader.vs", "fshader.fs");
+
+	createAttribs();
+
 	while (!glfwWindowShouldClose(window)){
-		testShader.Use();
+	
 		/* Render here */
 		//Put all rendering in between glClear, and glfwSwapBuffers
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-
 		glClear(GL_COLOR_BUFFER_BIT);
-		/* Swap front and back buffers */
 
+		testShader.use();
 		drawTriangle();
 		
 		glfwSwapBuffers(window);
