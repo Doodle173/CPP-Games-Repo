@@ -33,7 +33,10 @@ int main(void)
 	//register keyhandler
 	glfwSetKeyCallback(window, keyHandler);
 
-	Shader testShader("vshader.vs", "fshader.fs");
+	//shader that dictates color based off each vertex point
+	Shader testShader("vertShader.vs", "fragShader.fs");
+	//fade shader
+	Shader fadeShader("vertShader.vs", "weirdShader.fs");
 
 	createAttribs();
 
@@ -44,7 +47,13 @@ int main(void)
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
-		testShader.use();
+
+		float timeValue = glfwGetTime();
+		float colorValue = (sin(timeValue) / 2.0f) + 0.5f;
+		int vertexColorLocation = glGetUniformLocation(fadeShader.ID, "ourColor");
+		fadeShader.use();
+		glUniform4f(vertexColorLocation, 0.0f, colorValue, 0.0f, 1.0f);
+		fadeShader.use();
 		drawTriangle();
 		
 		glfwSwapBuffers(window);

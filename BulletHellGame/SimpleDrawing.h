@@ -8,9 +8,9 @@
 		//float order:
 		//x, y, z, then r, g, b
 		float verts[] = {
-			// positions         // colors
-			 0.5f, -0.5f, 0.0f,  1.0f, 0.0f, 0.0f,  // bottom right
-			-0.5f, -0.5f, 0.0f,  0.0f, 1.0f, 0.0f,  // bottom left
+			// positions         // colors, R,G,B
+			 0.5f, -0.5f, 0.0f,  0.0f, 0.0f, 1.0f,  // bottom right
+			-0.5f, -0.5f, 0.0f,  0.0f, 0.0f, 1.0f,  // bottom left
 			 0.0f,  0.5f, 0.0f,  0.0f, 0.0f, 1.0f   // top 
 		};
 
@@ -29,12 +29,6 @@
 		glEnableVertexAttribArray(1);
 
 		
-}
-void fadeEffect() {
-	//float timeValue = glfwGetTime();
-	//float greenValue = sin(timeValue) / 2.0f + 0.5f;
-	//int vertexColorLocation = glGetUniformLocation(shaderProgram, "ourColor");
-	//glUniform4f(vertexColorLocation, 0.0f, greenValue, 0.0f, 1.0f);
 }
 
 void drawTriangle() {

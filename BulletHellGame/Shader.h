@@ -13,6 +13,7 @@ class Shader
 {
 public:
 	unsigned int ID;
+
 	//constructor reads and builds shader
 	//activate shader
 	//utility uniform functions
