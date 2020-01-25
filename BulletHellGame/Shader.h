@@ -119,5 +119,10 @@ Shader(const char* vertexPath, const char* fragmentPath) {
 	{
 		glUniform1f(glGetUniformLocation(ID, name.c_str()), value);
 	}
+	void setFloat2f(const std::string& name, float width, float height)
+	{
+		glUniform2f(glGetUniformLocation(ID, name.c_str()), width, height);
+	}
+
 };
 #endif

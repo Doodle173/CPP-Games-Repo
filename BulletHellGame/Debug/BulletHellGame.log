@@ -1,7 +1,9 @@
 ﻿  Main.cpp
-Y:\Visual Studio Projects\CPP-Games-Repo\BulletHellGame\Main.cpp(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-Y:\Visual Studio Projects\CPP-Games-Repo\BulletHellGame\Main.cpp(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-Y:\Visual Studio Projects\CPP-Games-Repo\BulletHellGame\SimpleDrawing.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-Y:\Visual Studio Projects\CPP-Games-Repo\BulletHellGame\SimpleDrawing.h(40,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-Y:\Visual Studio Projects\CPP-Games-Repo\BulletHellGame\Main.cpp(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  BulletHellGame.vcxproj -> Y:\Visual Studio Projects\CPP-Games-Repo\BulletHellGame\Debug\BulletHellGame.exe
+C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games\BulletHellGame\Main.cpp(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games\BulletHellGame\Main.cpp(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games\BulletHellGame\SimpleDrawing.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games\BulletHellGame\SimpleDrawing.h(37,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games\BulletHellGame\SimpleDrawing.h(55,18): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games\BulletHellGame\SimpleDrawing.h(62,41): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games\BulletHellGame\Main.cpp(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  BulletHellGame.vcxproj -> C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games\BulletHellGame\Debug\BulletHellGame.exe
