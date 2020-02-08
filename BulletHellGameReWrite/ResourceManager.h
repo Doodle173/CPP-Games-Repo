@@ -25,8 +25,7 @@ class ResourceManager{
 	static std::map<std::string, Texture> Textures;
 
 	//Loads (and generates) a shader program from file loading vertex,  fragment, and geometry shader source code. If gShaderFile is not nullptr, it also loads a geometry shader.
-	static Shader LoadShader(const GLchar* vShaderFile, const GLchar* fShaderFile, const GLchar* gShaderFile, std::string name);
-	
+	static Shader LoadShader(const GLchar *vShaderFile, const GLchar *fShaderFile, const GLchar *gShaderFile, std::string name);
 	//get stored shader
 	static Shader GetShader(std::string name);
 
@@ -34,7 +33,7 @@ class ResourceManager{
 	static  Texture LoadTexture(const GLchar* file, GLboolean alpha, std::string name);
 
 	//retrieve stored texture:
-	static Texture GetTExture(std::string name);
+	static Texture GetTexture(std::string name);
 
 	//de-allocate all loaded resources
 	static void Clear();
@@ -44,10 +43,10 @@ private:
 	ResourceManager() { }
 
 	//Loads and generates a shader from file
-	static Shader loadShaderFromFile(const GLchar* vShaderFile, const GLchar* fShaderFile, const GLchar* gShaderFile = nullptr);
+	static Shader loadShaderFromFile(const GLchar *vShaderFile, const GLchar *fShaderFile, const GLchar *gShaderFile = nullptr);
 
 	//loads single texture from file
-	static Texture loadTExtureFromFile(const GLchar* file, GLboolean alpha);
+	static Texture loadTextureFromFile(const GLchar* file, GLboolean alpha);
 };
 #endif
 
