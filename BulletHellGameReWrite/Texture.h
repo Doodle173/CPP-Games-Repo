@@ -15,6 +15,7 @@
 #include<GL/glew.h>
 
 class Texture{
+public:
 	//Hold ID of texture object, used for all texture operations to reference this particular texture 
 	GLuint ID;
 

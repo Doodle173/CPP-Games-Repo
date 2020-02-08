@@ -1,1 +1,37 @@
-﻿
+﻿Y:\VisualStudio\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(459,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (BulletHellGameReWrite.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Game.cpp
+Z:\ProgrammingStuff\CPP-Games-Repo\BulletHellGameReWrite\Game.cpp(60,31): warning C4551: function call missing argument list
+Z:\ProgrammingStuff\CPP-Games-Repo\BulletHellGameReWrite\Game.cpp(62,24): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+  ResourceManager.cpp
+  Shader.cpp
+  Texture.cpp
+  Generating Code...
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+Game.obj : error LNK2019: unresolved external symbol "public: __thiscall Game::Game(unsigned int,unsigned int)" (??0Game@@QAE@II@Z) referenced in function "void __cdecl `dynamic initializer for 'BulletHell''(void)" (??__EBulletHell@@YAXXZ)
+Game.obj : error LNK2019: unresolved external symbol "public: __thiscall Game::~Game(void)" (??1Game@@QAE@XZ) referenced in function "void __cdecl `dynamic atexit destructor for 'BulletHell''(void)" (??__FBulletHell@@YAXXZ)
+Game.obj : error LNK2019: unresolved external symbol "public: void __thiscall Game::init(void)" (?init@Game@@QAEXXZ) referenced in function _main
+Game.obj : error LNK2019: unresolved external symbol "public: void __thiscall Game::ProcessInput(float)" (?ProcessInput@Game@@QAEXM@Z) referenced in function _main
+Game.obj : error LNK2019: unresolved external symbol "public: void __thiscall Game::Update(float)" (?Update@Game@@QAEXM@Z) referenced in function _main
+Game.obj : error LNK2019: unresolved external symbol "public: void __thiscall Game::Render(void)" (?Render@Game@@QAEXXZ) referenced in function _main
+Game.obj : error LNK2001: unresolved external symbol _glewExperimental
+ResourceManager.obj : error LNK2019: unresolved external symbol _SOIL_load_image referenced in function "private: static class Texture __cdecl ResourceManager::loadtextureFromFile(char const *,unsigned char)" (?loadtextureFromFile@ResourceManager@@CA?AVTexture@@PBDE@Z)
+ResourceManager.obj : error LNK2019: unresolved external symbol _SOIL_free_image_data referenced in function "private: static class Texture __cdecl ResourceManager::loadtextureFromFile(char const *,unsigned char)" (?loadtextureFromFile@ResourceManager@@CA?AVTexture@@PBDE@Z)
+Shader.obj : error LNK2001: unresolved external symbol ___glewAttachShader
+Shader.obj : error LNK2001: unresolved external symbol ___glewCompileShader
+Shader.obj : error LNK2001: unresolved external symbol ___glewCreateProgram
+Shader.obj : error LNK2001: unresolved external symbol ___glewCreateShader
+Shader.obj : error LNK2001: unresolved external symbol ___glewDeleteShader
+Shader.obj : error LNK2001: unresolved external symbol ___glewGetProgramInfoLog
+Shader.obj : error LNK2001: unresolved external symbol ___glewGetProgramiv
+Shader.obj : error LNK2001: unresolved external symbol ___glewGetShaderInfoLog
+Shader.obj : error LNK2001: unresolved external symbol ___glewGetShaderiv
+Shader.obj : error LNK2001: unresolved external symbol ___glewGetUniformLocation
+Shader.obj : error LNK2001: unresolved external symbol ___glewLinkProgram
+Shader.obj : error LNK2001: unresolved external symbol ___glewShaderSource
+Shader.obj : error LNK2001: unresolved external symbol ___glewUniform1f
+Shader.obj : error LNK2001: unresolved external symbol ___glewUniform1i
+Shader.obj : error LNK2001: unresolved external symbol ___glewUniform2f
+Shader.obj : error LNK2001: unresolved external symbol ___glewUniform3f
+Shader.obj : error LNK2001: unresolved external symbol ___glewUniform4f
+Shader.obj : error LNK2001: unresolved external symbol ___glewUseProgram
+Z:\ProgrammingStuff\CPP-Games-Repo\BulletHellGameReWrite\Debug\BulletHellGame.exe : fatal error LNK1120: 27 unresolved externals

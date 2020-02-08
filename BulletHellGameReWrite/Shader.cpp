@@ -12,7 +12,7 @@
 #include "Shader.h"
 #include<iostream>
 
-Shader& Shader::use() {
+Shader &Shader::use() {
 	glUseProgram(this->ID);
 	return *this;
 }

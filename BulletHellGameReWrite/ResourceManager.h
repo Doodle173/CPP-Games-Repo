@@ -21,6 +21,7 @@
 #include "Shader.h"
 
 class ResourceManager{
+public:
 	static std::map<std::string, Shader> Shaders;
 	static std::map<std::string, Texture> Textures;
 
@@ -46,7 +47,7 @@ private:
 	static Shader loadShaderFromFile(const GLchar *vShaderFile, const GLchar *fShaderFile, const GLchar *gShaderFile = nullptr);
 
 	//loads single texture from file
-	static Texture loadTextureFromFile(const GLchar* file, GLboolean alpha);
+	static Texture loadtextureFromFile(const GLchar* file, GLboolean alpha);
 };
 #endif
 

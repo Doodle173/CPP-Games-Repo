@@ -11,12 +11,12 @@
 
 #ifndef SHADER_H
 #define SHADER_H
+#define GLEW_STATIC
 
-#include<string>
-
-#include<Gl/glew.h>
+#include<GL/glew.h>
 #include<glm/glm.hpp>
 #include<glm/gtc/type_ptr.hpp>
+#include<string>
 
 class Shader
 {
