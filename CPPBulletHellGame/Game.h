@@ -3,6 +3,9 @@
 
 #include<GL/glew.h>
 #include<GLFW/glfw3.h>
+#include<glm/glm.hpp>
+#include<iostream>
+#include<iomanip>
 
 enum GameState {
 	GAME_ACTIVE,
