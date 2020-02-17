@@ -22,7 +22,7 @@ const GLuint SCREEN_WIDTH = 800;
 // The height of the screen
 const GLuint SCREEN_HEIGHT = 600;
 
-Game Breakout(SCREEN_WIDTH, SCREEN_HEIGHT);
+Game BulletHellGame(SCREEN_WIDTH, SCREEN_HEIGHT);
 
 int main(int argc, char* argv[])
 {
@@ -48,14 +48,14 @@ int main(int argc, char* argv[])
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
 	// Initialize game
-	Breakout.Init();
+	BulletHellGame.Init();
 
 	// DeltaTime variables
 	GLfloat deltaTime = 0.0f;
 	GLfloat lastFrame = 0.0f;
 
 	// Start Game within Menu State
-	Breakout.State = GAME_ACTIVE;
+	BulletHellGame.State = GAME_ACTIVE;
 
 	while (!glfwWindowShouldClose(window))
 	{
@@ -67,15 +67,15 @@ int main(int argc, char* argv[])
 
 		//deltaTime = 0.001f;
 		// Manage user input
-		Breakout.ProcessInput(deltaTime);
+		BulletHellGame.ProcessInput(deltaTime);
 
 		// Update Game state
-		Breakout.Update(deltaTime);
+		BulletHellGame.Update(deltaTime);
 
 		// Render
 		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
-		Breakout.Render();
+		BulletHellGame.Render();
 
 		glfwSwapBuffers(window);
 	}
@@ -95,8 +95,8 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 	if (key >= 0 && key < 1024)
 	{
 		if (action == GLFW_PRESS)
-			Breakout.Keys[key] = GL_TRUE;
+			BulletHellGame.Keys[key] = GL_TRUE;
 		else if (action == GLFW_RELEASE)
-			Breakout.Keys[key] = GL_FALSE;
+			BulletHellGame.Keys[key] = GL_FALSE;
 	}
 }

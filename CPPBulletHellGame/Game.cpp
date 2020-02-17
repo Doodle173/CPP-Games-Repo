@@ -14,8 +14,10 @@
 // Game-related State data
 SpriteRenderer* Renderer;
 GameObject* Player;
+GameObject* PlayerProjectile;
 
-const glm::vec2 PLAYER_SIZE(128, 128);
+const glm::vec2 PLAYER_SIZE(64, 64);
+const glm::vec2 PROJECTILE_SIZE(128, 128);
 const GLfloat PLAYER_VELOCITY(500.0f);
 
 float score = 0;
@@ -40,7 +42,9 @@ void Game::Init()
 	ResourceManager::GetShader("sprite").Use().SetInteger("image", 0);
 	ResourceManager::GetShader("sprite").SetMatrix4("projection", projection);
 	// Load textures
+	ResourceManager::LoadTexture("Resources/Textures/menu.png", GL_TRUE, "mainMenu");
 	ResourceManager::LoadTexture("Resources/Textures/triangle.png", GL_TRUE, "player");
+	ResourceManager::LoadTexture("Resources/Textures/projectile.png", GL_TRUE, "projectile");
 	// Set render-specific controls
 
 	Shader myShader;
@@ -50,6 +54,9 @@ void Game::Init()
 	//set up game objects
 	glm::vec2 playerPos = glm::vec2(this->Width / 2 - PLAYER_SIZE.x / 2, this->Height - PLAYER_SIZE.y);
 	Player = new GameObject(playerPos, PLAYER_SIZE, ResourceManager::GetTexture("player"));
+
+	glm::vec2 playerProjectilePos = glm::vec2(this->Width / 2 - PLAYER_SIZE.x / 2, this->Height - PLAYER_SIZE.y);
+	PlayerProjectile = new GameObject(playerPos, PLAYER_SIZE, ResourceManager::GetTexture("projectile"));
 }
 
 void Game::Update(GLfloat dt)
@@ -88,10 +95,7 @@ void Game::ProcessInput(GLfloat dt){
 
 		//z button action
 		if (this->Keys[GLFW_KEY_Z]) {
-			
-
 			score += 0.005f;
-	
 			std::cout << "Score: " << std::fixed << std::setprecision(2) << score << "\n";
 		}
 	}
@@ -99,10 +103,10 @@ void Game::ProcessInput(GLfloat dt){
 
 void Game::Render()
 {
-	Texture2D myTexture;
-	myTexture = ResourceManager::GetTexture("triangle");
+
 	//Renderer->DrawSprite(myTexture, glm::vec2(200, 200), glm::vec2(300, 400), 0.0f, glm::vec3(1.0f, 1.0f, 1.0f));
 	//Renderer->DrawSprite(myTexture, glm::vec2(0, 0), glm::vec2(this->Width / 6, this->Height / 6), 0.0f);
 
-	Player->Draw(*Renderer);
+
+	//Player->Draw(*Renderer);
 }
