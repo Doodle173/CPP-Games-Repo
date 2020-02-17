@@ -55,7 +55,9 @@ int main(int argc, char* argv[])
 	GLfloat lastFrame = 0.0f;
 
 	// Start Game within Menu State
-	BulletHellGame.State = GAME_ACTIVE;
+
+	//BulletHellGame.State = GAME_ACTIVE;
+	BulletHellGame.State = GAME_MENU;
 
 	while (!glfwWindowShouldClose(window))
 	{
