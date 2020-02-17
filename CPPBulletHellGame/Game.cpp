@@ -6,7 +6,7 @@
 ** Creative Commons, either version 4 of the License, or (at your
 ** option) any later version.
 ******************************************************************/
-#include "game.h"
+#include "Game.h"
 #include "ResourceManager.h"
 #include "SpriteRenderer.h"
 #include<glm/glm.hpp>
@@ -29,13 +29,13 @@ Game::~Game()
 void Game::Init()
 {
 	// Load shaders
-	ResourceManager::LoadShader("Resources\Shaders\SpriteVert.vert", "Resources\Shaders\SpriteFrag.frag", nullptr, "sprite");
+	ResourceManager::LoadShader("Resources/Shaders/SpriteVert.vs", "Resources/Shaders/SpriteFrag.frag", nullptr, "sprite");
 	// Configure shaders
 	glm::mat4 projection = glm::ortho(0.0f, static_cast<GLfloat>(this->Width), static_cast<GLfloat>(this->Height), 0.0f, -1.0f, 1.0f);
 	ResourceManager::GetShader("sprite").Use().SetInteger("image", 0);
 	ResourceManager::GetShader("sprite").SetMatrix4("projection", projection);
 	// Load textures
-	ResourceManager::LoadTexture("Resources/Textures/triangle.png", GL_TRUE, "triangle");
+	ResourceManager::LoadTexture("Resources/Textures/trianglemid.png", GL_TRUE, "triangle");
 	// Set render-specific controls
 
 	Shader myShader;

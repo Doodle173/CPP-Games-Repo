@@ -142,7 +142,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Debug\Resources\Shaders\SpriteFrag.frag" />
-    <None Include="Debug\Resources\Shaders\SpriteVert.vert" />
+    <None Include="Debug\Resources\Shaders\SpriteVert.vs" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Debug\Resources\Textures\triangle.png" />

@@ -60,7 +60,7 @@
     <None Include="Debug\Resources\Shaders\SpriteFrag.frag">
       <Filter>Resources\Shaders</Filter>
     </None>
-    <None Include="Debug\Resources\Shaders\SpriteVert.vert">
+    <None Include="Debug\Resources\Shaders\SpriteVert.vs">
       <Filter>Resources\Shaders</Filter>
     </None>
   </ItemGroup>
