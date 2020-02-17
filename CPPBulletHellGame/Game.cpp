@@ -64,6 +64,10 @@ void Game::Update(GLfloat dt)
 
 
 void Game::ProcessInput(GLfloat dt){
+	if (this->State == GAME_MENU) {
+
+	}
+
 	if (this->State == GAME_ACTIVE) {
 		GLfloat velocity = PLAYER_VELOCITY * dt;
 
@@ -92,9 +96,10 @@ void Game::ProcessInput(GLfloat dt){
 		}
 
 		//z button action
-		if (this->Keys[GLFW_KEY_Z]) {
-			score += 0.005f;
+		if (this->Keys[GLFW_KEY_Z] && !this->KeysProcessed[GLFW_KEY_Z]) {
+			score += 0.5f;
 			std::cout << "Score: " << std::fixed << std::setprecision(2) << score << "\n";
+			this->KeysProcessed[GLFW_KEY_Z] = GL_TRUE;
 		}
 	}
 }

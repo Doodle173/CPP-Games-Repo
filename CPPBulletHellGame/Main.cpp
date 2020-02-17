@@ -57,7 +57,7 @@ int main(int argc, char* argv[])
 	// Start Game within Menu State
 
 	//BulletHellGame.State = GAME_ACTIVE;
-	BulletHellGame.State = GAME_MENU;
+	BulletHellGame.State = GAME_ACTIVE;
 
 	while (!glfwWindowShouldClose(window))
 	{
@@ -98,7 +98,10 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 	{
 		if (action == GLFW_PRESS)
 			BulletHellGame.Keys[key] = GL_TRUE;
-		else if (action == GLFW_RELEASE)
+		else if (action == GLFW_RELEASE) {
 			BulletHellGame.Keys[key] = GL_FALSE;
+			BulletHellGame.KeysProcessed[key] = GL_FALSE;
+		}
+			
 	}
 }

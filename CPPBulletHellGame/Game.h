@@ -18,6 +18,7 @@ public:
 	//gamestate
 	GameState State;
 	GLboolean Keys[1024];
+	GLboolean KeysProcessed[1024];
 	GLuint Width, Height;
 
 	Game(GLuint width, GLuint height);
