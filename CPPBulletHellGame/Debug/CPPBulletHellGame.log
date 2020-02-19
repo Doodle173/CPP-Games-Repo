@@ -1,3 +1,17 @@
 ﻿  Game.cpp
-Z:\ProgrammingStuff\CPP-Games-Repo\CPPBulletHellGame\ObjectMovement.h(5,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  CPPBulletHellGame.vcxproj -> Z:\ProgrammingStuff\CPP-Games-Repo\CPPBulletHellGame\Debug\CPPBulletHellGame.exe
+C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games-Repo\CPPBulletHellGame\ObjectMovement.h(5,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  GameObject.cpp
+  Main.cpp
+C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games-Repo\CPPBulletHellGame\ObjectMovement.h(21,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  ResourceManager.cpp
+  Shader.cpp
+  SpriteRenderer.cpp
+  Texture2D.cpp
+  Generating Code...
+C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games-Repo\CPPBulletHellGame\Main.cpp(65,24): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+SOIL.lib(image_DXT.obj) : warning LNK4099: PDB 'SOIL.pdb' was not found with 'SOIL.lib(image_DXT.obj)' or at 'C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games-Repo\CPPBulletHellGame\Debug\SOIL.pdb'; linking object as if no debug info
+SOIL.lib(image_helper.obj) : warning LNK4099: PDB 'SOIL.pdb' was not found with 'SOIL.lib(image_helper.obj)' or at 'C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games-Repo\CPPBulletHellGame\Debug\SOIL.pdb'; linking object as if no debug info
+SOIL.lib(SOIL.obj) : warning LNK4099: PDB 'SOIL.pdb' was not found with 'SOIL.lib(SOIL.obj)' or at 'C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games-Repo\CPPBulletHellGame\Debug\SOIL.pdb'; linking object as if no debug info
+SOIL.lib(stb_image_aug.obj) : warning LNK4099: PDB 'SOIL.pdb' was not found with 'SOIL.lib(stb_image_aug.obj)' or at 'C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games-Repo\CPPBulletHellGame\Debug\SOIL.pdb'; linking object as if no debug info
+  CPPBulletHellGame.vcxproj -> C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games-Repo\CPPBulletHellGame\Debug\CPPBulletHellGame.exe
