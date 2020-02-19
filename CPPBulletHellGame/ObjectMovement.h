@@ -17,7 +17,7 @@ void CircleMovement(GameObject *object, float radius, float angle) {
 }
 
 //GameObject, Amplitude, B Value, Period
-void WaveMovement(GameObject *object, float amp, float period, float b) {
+void WaveMovement(GameObject* object, float amp, float period, float b) {
 	float time = glfwGetTime();
 
 	float x = object->Position.x;
