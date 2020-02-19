@@ -1,3 +1,4 @@
-﻿  Main.cpp
-Z:\ProgrammingStuff\CPP-Games-Repo\CPPBulletHellGame\Main.cpp(65,24): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
-  CPPBulletHellGame.vcxproj -> Z:\ProgrammingStuff\CPP-Games-Repo\CPPBulletHellGame\Debug\CPPBulletHellGame.exe
+﻿  Game.cpp
+C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games-Repo\CPPBulletHellGame\ObjectMovement.h(5,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games-Repo\CPPBulletHellGame\ObjectMovement.h(21,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  CPPBulletHellGame.vcxproj -> C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games-Repo\CPPBulletHellGame\Debug\CPPBulletHellGame.exe

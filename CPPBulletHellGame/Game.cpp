@@ -10,6 +10,8 @@
 #include "ResourceManager.h"
 #include "SpriteRenderer.h"
 #include "GameObject.h"
+#include "ObjectMovement.h"
+#include<math.h>
 
 // Game-related State data
 SpriteRenderer* Renderer;
@@ -55,6 +57,9 @@ void Game::Init()
 	//set up game objects
 	glm::vec2 playerPos = glm::vec2(this->Width / 2 - PLAYER_SIZE.x / 2, this->Height - PLAYER_SIZE.y);
 	Player = new GameObject(playerPos, PLAYER_SIZE, ResourceManager::GetTexture("player"));
+
+	glm::vec2 projectilePos = glm::vec2(this->Width / 2, this->Height / 2);
+	PlayerProjectile = new GameObject(projectilePos, PROJECTILE_SIZE, ResourceManager::GetTexture("projectile"));
 }
 
 void Game::Update(GLfloat dt)
@@ -101,11 +106,24 @@ void Game::ProcessInput(GLfloat dt){
 			std::cout << "Score: " << std::fixed << std::setprecision(2) << score << "\n";
 			this->KeysProcessed[GLFW_KEY_Z] = GL_TRUE;
 		}
+
+		if (this->Keys[GLFW_KEY_X]) {
+			//GameObject, radius, angle
+			//CircleMovement(PlayerProjectile, 3.14f, 5.0f);
+
+			//WaveMovement
+			WaveMovement(PlayerProjectile, 200.0f, 150.0f, 2.0f);
+		}
 	}
 }
 
-void Game::Render(){
+
+
+
+void Game::Render() {
 	//Renderer->DrawSprite(myTexture, glm::vec2(200, 200), glm::vec2(300, 400), 0.0f, glm::vec3(1.0f, 1.0f, 1.0f));
 	//Renderer->DrawSprite(myTexture, glm::vec2(0, 0), glm::vec2(this->Width / 6, this->Height / 6), 0.0f);
+
 	Player->Draw(*Renderer);
+	PlayerProjectile->Draw(*Renderer);
 }
