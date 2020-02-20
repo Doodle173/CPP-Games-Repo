@@ -21,7 +21,7 @@ GameObject* PlayerProjectile;
 const glm::vec2 PLAYER_SIZE(64, 64);
 const glm::vec2 PROJECTILE_SIZE(128, 128);
 const GLfloat PLAYER_VELOCITY(500.0f);
-const GLfloat PROJECTILE_VELOCITY(25.0f);
+const GLfloat PROJECTILE_VELOCITY(5.0f);
 
 float score = 0;
 
