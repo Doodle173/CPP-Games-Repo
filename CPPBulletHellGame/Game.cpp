@@ -109,7 +109,7 @@ void Game::ProcessInput(GLfloat dt){
 
 		if (this->Keys[GLFW_KEY_X]) {
 			//GameObject, radius, angle
-			CircleMovement(PlayerProjectile, 1.0f, 1.0f);
+			CircleMovement(PlayerProjectile, 2.0f, 2.0f);
 		}
 	}
 }
