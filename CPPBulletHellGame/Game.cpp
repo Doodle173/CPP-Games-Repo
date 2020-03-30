@@ -11,19 +11,15 @@
 #include "SpriteRenderer.h"
 #include "GameObject.h"
 #include "ObjectMovement.h"
+#include "TetrisBlock.h"
 #include<math.h>
 
 // Game-related State data
 SpriteRenderer* Renderer;
-GameObject* Player;
-GameObject* PlayerProjectile;
+TetrisBlock T;
+const glm::vec2 blockSize(32, 32);
 
-const glm::vec2 PLAYER_SIZE(64, 64);
-const glm::vec2 PROJECTILE_SIZE(128, 128);
-const GLfloat PLAYER_VELOCITY(500.0f);
-const GLfloat PROJECTILE_VELOCITY(5.0f);
-
-float score = 0;
+const GLfloat blockVelocity(500.0f);
 
 Game::Game(GLuint width, GLuint height)
 	: State(GAME_ACTIVE), Keys(), Width(width), Height(height)
@@ -45,73 +41,26 @@ void Game::Init()
 	ResourceManager::GetShader("sprite").Use().SetInteger("image", 0);
 	ResourceManager::GetShader("sprite").SetMatrix4("projection", projection);
 	// Load textures
-	ResourceManager::LoadTexture("Resources/Textures/menu.png", GL_TRUE, "mainMenu");
-	ResourceManager::LoadTexture("Resources/Textures/triangle.png", GL_TRUE, "player");
-	ResourceManager::LoadTexture("Resources/Textures/projectile.png", GL_TRUE, "projectile");
+	ResourceManager::LoadTexture("Resources/Textures/block.png", GL_TRUE, "block");
+
+	//load blocks
+
+	T.Load("Resources/Blocks/testBrick.brick", this->Width, this->Height * 0.5);
+
 	// Set render-specific controls
 
 	Shader myShader;
 	myShader = ResourceManager::GetShader("sprite");
 	Renderer = new SpriteRenderer(myShader);
-
-	//set up game objects
-	glm::vec2 playerPos = glm::vec2(this->Width / 2 - PLAYER_SIZE.x / 2, this->Height - PLAYER_SIZE.y);
-	Player = new GameObject(playerPos, PLAYER_SIZE, ResourceManager::GetTexture("player"));
-
-	glm::vec2 projectilePos = glm::vec2(this->Width / 2, this->Height / 2);
-	PlayerProjectile = new GameObject(projectilePos, PROJECTILE_SIZE, ResourceManager::GetTexture("projectile"));
 }
 
-void Game::Update(GLfloat dt)
-{
+void Game::Update(GLfloat dt){
 
 }
 
 
 void Game::ProcessInput(GLfloat dt){
-	if (this->State == GAME_MENU) {
 
-	}
-
-	if (this->State == GAME_ACTIVE) {
-		GLfloat velocity = PLAYER_VELOCITY * dt;
-
-		//move left
-		if (this->Keys[GLFW_KEY_A]) {
-			if (Player->Position.x >= 0)
-				Player->Position.x -= velocity;
-		}
-
-		//move right
-		if (this->Keys[GLFW_KEY_D]) {
-			if (Player->Position.x <= this->Width - Player->Size.x)
-				Player->Position.x += velocity;
-		}
-
-		//move up
-		if (this->Keys[GLFW_KEY_W]) {
-			if (Player->Position.y >= 0)
-				Player->Position.y -= velocity;
-		}
-
-		//move down
-		if (this->Keys[GLFW_KEY_S]) {
-			if (Player->Position.y <= this->Height - Player->Size.y)
-				Player->Position.y += velocity;
-		}
-
-		//z button action
-		if (this->Keys[GLFW_KEY_Z] && !this->KeysProcessed[GLFW_KEY_Z]) {
-			score += 0.5f;
-			std::cout << "Score: " << std::fixed << std::setprecision(2) << score << "\n";
-			this->KeysProcessed[GLFW_KEY_Z] = GL_TRUE;
-		}
-
-		if (this->Keys[GLFW_KEY_X]) {
-			//GameObject, radius, angle
-			CircleMovement(PlayerProjectile, 2.0f, 2.0f);
-		}
-	}
 }
 
 
@@ -121,6 +70,12 @@ void Game::Render() {
 	//Renderer->DrawSprite(myTexture, glm::vec2(200, 200), glm::vec2(300, 400), 0.0f, glm::vec3(1.0f, 1.0f, 1.0f));
 	//Renderer->DrawSprite(myTexture, glm::vec2(0, 0), glm::vec2(this->Width / 6, this->Height / 6), 0.0f);
 
-	Player->Draw(*Renderer);
-	PlayerProjectile->Draw(*Renderer);
+	//Player->Draw(*Renderer);
+	//PlayerProjectile->Draw(*Renderer);
+
+	if (this->State == GAME_ACTIVE) {
+		Renderer->DrawSprite(ResourceManager::GetTexture("block"),
+			glm::vec2(0, 0), glm::vec2(this->Width, this->Height), 0.0f
+		);
+	}
 }

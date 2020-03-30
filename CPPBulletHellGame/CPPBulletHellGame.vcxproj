@@ -23,6 +23,7 @@
     <ProjectGuid>{CCCA4A92-EB5B-4248-8EC0-EA3777EE44F0}</ProjectGuid>
     <RootNamespace>CPPBulletHellGame</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>CPPTetris</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -132,6 +133,7 @@
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="SpriteRenderer.cpp" />
+    <ClCompile Include="TetrisBlock.cpp" />
     <ClCompile Include="Texture2D.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -141,6 +143,7 @@
     <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="SpriteRenderer.h" />
+    <ClInclude Include="TetrisBlock.h" />
     <ClInclude Include="Texture2D.h" />
   </ItemGroup>
   <ItemGroup>

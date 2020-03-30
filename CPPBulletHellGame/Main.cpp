@@ -35,6 +35,8 @@ int main(int argc, char* argv[])
 	GLFWwindow* window = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Bullet Hell Game", nullptr, nullptr);
 	glfwMakeContextCurrent(window);
 
+	glfwSwapInterval(1);
+
 	//glewExperimental = GL_TRUE;
 	glewInit();
 	glGetError(); // Call it once to catch glewInit() bug, all other errors are now from our application.
@@ -54,9 +56,6 @@ int main(int argc, char* argv[])
 	GLfloat deltaTime = 0.0f;
 	GLfloat lastFrame = 0.0f;
 
-	// Start Game within Menu State
-
-	//BulletHellGame.State = GAME_ACTIVE;
 	BulletHellGame.State = GAME_ACTIVE;
 
 	while (!glfwWindowShouldClose(window))

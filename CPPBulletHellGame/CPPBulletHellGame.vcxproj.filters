@@ -41,6 +41,9 @@
     <ClCompile Include="GameObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TetrisBlock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -58,10 +61,13 @@
     <ClInclude Include="SpriteRenderer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ObjectMovement.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="GameObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ObjectMovement.h">
+    <ClInclude Include="TetrisBlock.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

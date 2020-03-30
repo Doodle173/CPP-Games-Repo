@@ -1,4 +1,11 @@
-﻿  Game.cpp
-C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games-Repo\CPPBulletHellGame\ObjectMovement.h(5,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games-Repo\CPPBulletHellGame\ObjectMovement.h(21,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  CPPBulletHellGame.vcxproj -> C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games-Repo\CPPBulletHellGame\Debug\CPPBulletHellGame.exe
+﻿Y:\VisualStudio\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(459,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (CPPBulletHellGame.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Game.cpp
+Z:\ProgrammingStuff\CPP-Games-Repo\CPPBulletHellGame\ObjectMovement.h(5,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+Z:\ProgrammingStuff\CPP-Games-Repo\CPPBulletHellGame\ObjectMovement.h(21,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+Z:\ProgrammingStuff\CPP-Games-Repo\CPPBulletHellGame\Game.cpp(48,71): warning C4244: 'argument': conversion from 'double' to 'GLuint', possible loss of data
+Z:\ProgrammingStuff\CPP-Games-Repo\CPPBulletHellGame\Game.cpp(77,11): error C2664: 'void SpriteRenderer::DrawSprite(Texture2D &,glm::vec2,glm::vec2,GLfloat,glm::vec3)': cannot convert argument 1 from 'Texture2D' to 'Texture2D &'
+Z:\ProgrammingStuff\CPP-Games-Repo\CPPBulletHellGame\Game.cpp(77,51): message : A non-const reference may only be bound to an lvalue
+Z:\ProgrammingStuff\CPP-Games-Repo\CPPBulletHellGame\SpriteRenderer.h(28,7): message : see declaration of 'SpriteRenderer::DrawSprite'
+  Main.cpp
+Z:\ProgrammingStuff\CPP-Games-Repo\CPPBulletHellGame\Main.cpp(64,24): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+  Generating Code...
