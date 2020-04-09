@@ -1,4 +1,0 @@
-﻿Y:\VisualStudio\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(459,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (CPPGameEngine.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Main.cpp
-Z:\ProgrammingStuff\CPP-Games-Repo\OpenGL Learning\Main.cpp(56,20): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  CPPGameEngine.vcxproj -> Z:\ProgrammingStuff\CPP-Games-Repo\OpenGL Learning\Debug\OpenGL Learning.exe
