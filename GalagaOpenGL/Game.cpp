@@ -24,7 +24,7 @@ void Game::init() {
 	myShader = ResourceManager::GetShader("sprite");
 	Renderer = new SpriteRenderer(myShader);
 
-	ResourceManager::LoadTexture("Resources/textures/galaga_ship_32x.png", GL_TRUE, "ship");
+	ResourceManager::LoadTexture("Resources/textures/ship.png", GL_TRUE, "ship");
 
 }
 
@@ -36,5 +36,7 @@ void Game::Update(GLfloat dt) {
 }
 
 void Game::Render() {
-
+	Texture myTexture;
+	myTexture = ResourceManager::GetTexture("face");
+	Renderer->DrawSprite(myTexture, glm::vec2(0, 0), glm::vec2(32, 32), 45.0f, glm::vec3(0.0f, 0.0f, 0.0f));
 }
