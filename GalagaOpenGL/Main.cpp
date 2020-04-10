@@ -21,6 +21,7 @@ int main(void)
     GLFWwindow* window;
 
     /* Initialize the library */
+    glfwInit();
     if (!glfwInit())
         return -1;
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -39,7 +40,7 @@ int main(void)
         return -1;
     }
     else {
-        std::cout << "GLEW Initialized Properly.";
+        std::cout << "GLFW & Window Initialized Properly.";
     }
 
     /* Make the window's context current */

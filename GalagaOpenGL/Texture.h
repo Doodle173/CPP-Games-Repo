@@ -2,12 +2,14 @@
 #define TEXTURE_H
 
 #include<gl/glew.h>
+#include<stb/stb.h>
+#include<stb/stb_image.h>
 
 class Texture
 {
 public:
 	//Texture object ID. Used for operations to reference this specific texture
-	GLuint TEX_ID;
+	GLuint ID;
 
 	//Texture image dimensions
 	GLuint Width, Height;   //width & height of loaded image in pixels

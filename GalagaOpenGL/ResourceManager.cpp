@@ -5,6 +5,8 @@
 #include<fstream>
 
 #include<SOIL\SOIL.h>
+#include<stb/stb.h>
+#include<stb/stb_image.h>
 
 
 //instantiate static variables
@@ -36,22 +38,21 @@ void ResourceManager::clear() {
 
 	//delete all loaded textures
 	for (auto iter : Textures)
-		glDeleteTextures(1, &iter.second.TEX_ID);
+		glDeleteTextures(1, &iter.second.ID);
 }
 
 Shader ResourceManager::loadShaderFromFile(const GLchar *vShaderFile, const GLchar *fShaderFile, const GLchar *gShaderFile) {
-	std::string vertexCode, fragmentCode, geometryCode;
+	std::string vertexCode;
+	std::string fragmentCode; 
+	std::string geometryCode;
 
 	try {
 		//open files
 		std::ifstream vertexShaderFile(vShaderFile);
 		std::ifstream fragmentShaderFile(fShaderFile);
 		std::stringstream vShaderStream, fShaderStream;
-		//std::ifstream geometryShaderFile(gShaderFile);
 
-	
-
-		//read file buffer content into stream
+		//read files into streams
 		vShaderStream << vertexShaderFile.rdbuf();
 		fShaderStream << fragmentShaderFile.rdbuf();
 
@@ -59,51 +60,52 @@ Shader ResourceManager::loadShaderFromFile(const GLchar *vShaderFile, const GLch
 		vertexShaderFile.close();
 		fragmentShaderFile.close();
 
-		//convert stream into string 
+		//convert stream to string
 		vertexCode = vShaderStream.str();
 		fragmentCode = fShaderStream.str();
-	
-		//if geometry shader is not null, load it
+
+		//if geo shader path is present, load it
 		if (gShaderFile != nullptr) {
 			std::ifstream geometryShaderFile(gShaderFile);
 			std::stringstream gShaderStream;
+
 			gShaderStream << geometryShaderFile.rdbuf();
 			geometryShaderFile.close();
 			geometryCode = gShaderStream.str();
 		}
 	}
-	catch (std::exception e) {
-		std::cout << "|SHADER ERROR:| Failed to read shader files" << std::endl;
+	catch(std::exception e){
+		std::cout << "|Error:| Failed to read shader files.";
 	}
-	const GLchar* vShaderCode = vertexCode.c_str();
-	const GLchar* fShaderCode = fragmentCode.c_str();
-	const GLchar* gShaderCode = geometryCode.c_str();
 
-	//create shader objects from source code
+	const GLchar *vShaderCode = vertexCode.c_str();
+	const GLchar *fShaderCode = fragmentCode.c_str();
+	const GLchar *gShaderCode = geometryCode.c_str();
+
+	//create shaader object from source code
 
 	Shader shader;
-	shader.CompileShader(vShaderCode, fShaderCode, gShaderCode != nullptr ? gShaderCode : nullptr);
+	shader.CompileShader(vShaderCode, fShaderCode, gShaderFile != nullptr ? gShaderCode : nullptr);
 	return shader;
 }
 
 Texture ResourceManager::loadTextureFromFile(const GLchar *file, GLboolean alpha) {
-	
+
 	//create texture object
 	Texture texture;
 	if (alpha) {
 		texture.Internal_Format = GL_RGBA;
 		texture.Image_Format = GL_RGBA;
 	}
-	
+
 	//load image
 	int width, height;
-	unsigned char* image = SOIL_load_image(file, &width, &height, 0, texture.Image_Format = GL_RGBA ? SOIL_LOAD_RGBA : SOIL_LOAD_RGB);
-	
+	unsigned char* image = SOIL_load_image(file, &width, &height, 0, texture.Image_Format == GL_RGBA ? SOIL_LOAD_RGBA : SOIL_LOAD_RGB);
 
-	//generate texture
+	//gen texture
 	texture.Generate(width, height, image);
 
-	//clear image data
+	//free image data
 	SOIL_free_image_data(image);
 	return texture;
 }
