@@ -90,6 +90,7 @@ int main(void)
         currentTime += deltaTime;
 
         float fps = frameCounter / currentTime;
+		
         if (currentTime >= 1) {
             frameCounter = 0;
             currentTime = 0;
@@ -110,8 +111,11 @@ int main(void)
         glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
-        fpsRenderer->RenderText("FPS: " + std::to_string(fps), 0, 0, 1.0f, glm::vec3(1.0f, 0.0f, 0.0f));
-        Galaga.Render();
+		std::string fps_val = std::to_string(fps);
+		fps_val.resize(4);
+		Galaga.Render();
+        fpsRenderer->RenderText("FPS: " + fps_val, 0, 0, 1.0f, glm::vec3(1.0f, 1.0f, 1.0f));
+       
 
         glfwSwapBuffers(window);
 

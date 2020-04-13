@@ -21,35 +21,23 @@
     <Filter Include="Engine">
       <UniqueIdentifier>{b14cb1bc-f11b-41b0-a632-d726e78a6de2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\cpp">
-      <UniqueIdentifier>{8c26ac25-f237-4a68-a915-40bb47ac6af6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\header">
-      <UniqueIdentifier>{424acab1-d99c-43a8-9a1d-c23f0f089a47}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\cpp\Graphics">
+    <Filter Include="Engine\Graphics">
       <UniqueIdentifier>{72c3fb59-d1c6-4380-8046-f869a00503d8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\header\Graphics">
-      <UniqueIdentifier>{51faf503-a656-4f6a-b5cb-81c7f6a00e7b}</UniqueIdentifier>
+    <Filter Include="Engine\Graphics\cpp">
+      <UniqueIdentifier>{8c26ac25-f237-4a68-a915-40bb47ac6af6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\cpp\Physics">
-      <UniqueIdentifier>{844a7bfb-640f-4898-bd2c-d3757d52e5f7}</UniqueIdentifier>
+    <Filter Include="Engine\Graphics\header">
+      <UniqueIdentifier>{424acab1-d99c-43a8-9a1d-c23f0f089a47}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\header\Physics">
-      <UniqueIdentifier>{dca0ad56-8add-4f36-9e80-be288127c267}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\main">
+    <Filter Include="Engine\Game">
       <UniqueIdentifier>{4829412b-a034-430b-a6c6-d8ac5b064cff}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\main\cpp">
+    <Filter Include="Engine\Game\cpp">
       <UniqueIdentifier>{794a0cea-5eaf-4149-b202-04ba729229af}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\main\header">
+    <Filter Include="Engine\Game\header">
       <UniqueIdentifier>{5c83f89f-2aa7-4ed9-8aa7-d9a82c52be70}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\util">
-      <UniqueIdentifier>{571fa515-4ceb-48b5-bf4b-14f371c10a16}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -57,54 +45,60 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ResourceManager.cpp">
-      <Filter>Engine\cpp</Filter>
-    </ClCompile>
-    <ClCompile Include="Texture.cpp">
-      <Filter>Engine\cpp\Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="TextRenderer.cpp">
-      <Filter>Engine\cpp\Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="SpriteRenderer.cpp">
-      <Filter>Engine\cpp\Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="Shader.cpp">
-      <Filter>Engine\cpp\Graphics</Filter>
+      <Filter>Engine\Graphics\cpp</Filter>
     </ClCompile>
     <ClCompile Include="PlayerObject.cpp">
-      <Filter>Engine\main\cpp</Filter>
+      <Filter>Engine\Game\cpp</Filter>
     </ClCompile>
     <ClCompile Include="EnemyObject.cpp">
-      <Filter>Engine\main\cpp</Filter>
+      <Filter>Engine\Game\cpp</Filter>
     </ClCompile>
     <ClCompile Include="Game.cpp">
-      <Filter>Engine\main\cpp</Filter>
+      <Filter>Engine\Game\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>Engine\Graphics\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteRenderer.cpp">
+      <Filter>Engine\Graphics\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="TextRenderer.cpp">
+      <Filter>Engine\Graphics\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Engine\Graphics\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjectileObject.cpp">
+      <Filter>Engine\Game\cpp</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Shader.h">
-      <Filter>Engine\header\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="SpriteRenderer.h">
-      <Filter>Engine\header\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="TextRenderer.h">
-      <Filter>Engine\header\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="Texture.h">
-      <Filter>Engine\header\Graphics</Filter>
-    </ClInclude>
     <ClInclude Include="ResourceManager.h">
-      <Filter>Engine\main\header</Filter>
+      <Filter>Engine\Game\header</Filter>
     </ClInclude>
     <ClInclude Include="Game.h">
-      <Filter>Engine\main\header</Filter>
+      <Filter>Engine\Game\header</Filter>
     </ClInclude>
     <ClInclude Include="PlayerObject.h">
-      <Filter>Engine\main\header</Filter>
+      <Filter>Engine\Game\header</Filter>
     </ClInclude>
     <ClInclude Include="EnemyObject.h">
-      <Filter>Engine\main\header</Filter>
+      <Filter>Engine\Game\header</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Engine\Graphics\header</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Engine\Graphics\header</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteRenderer.h">
+      <Filter>Engine\Graphics\header</Filter>
+    </ClInclude>
+    <ClInclude Include="TextRenderer.h">
+      <Filter>Engine\Graphics\header</Filter>
+    </ClInclude>
+    <ClInclude Include="ProjectileObject.h">
+      <Filter>Engine\Game\header</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -23,6 +23,7 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="PlayerObject.cpp" />
+    <ClCompile Include="ProjectileObject.cpp" />
     <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="SpriteRenderer.cpp" />
@@ -33,6 +34,7 @@
     <ClInclude Include="EnemyObject.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="PlayerObject.h" />
+    <ClInclude Include="ProjectileObject.h" />
     <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="SpriteRenderer.h" />

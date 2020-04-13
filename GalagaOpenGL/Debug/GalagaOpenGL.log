@@ -1,19 +1,5 @@
-﻿  EnemyObject.cpp
-  Game.cpp
-  Main.cpp
-C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games-Repo\GalagaOpenGL\Game.cpp(55,73): warning C4244: 'argument': conversion from 'GLuint' to 'GLfloat', possible loss of data
-  PlayerObject.cpp
-  ResourceManager.cpp
-  Shader.cpp
-  SpriteRenderer.cpp
-  TextRenderer.cpp
-C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games-Repo\GalagaOpenGL\Main.cpp(86,30): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
-  Texture.cpp
-  Generating Code...
-C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games-Repo\GalagaOpenGL\TextRenderer.cpp(78,33): warning C4838: conversion from 'FT_Pos' to 'GLuint' requires a narrowing conversion
-LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
-SOIL.lib(image_DXT.obj) : warning LNK4099: PDB 'SOIL.pdb' was not found with 'SOIL.lib(image_DXT.obj)' or at 'C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games-Repo\GalagaOpenGL\Debug\SOIL.pdb'; linking object as if no debug info
-SOIL.lib(image_helper.obj) : warning LNK4099: PDB 'SOIL.pdb' was not found with 'SOIL.lib(image_helper.obj)' or at 'C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games-Repo\GalagaOpenGL\Debug\SOIL.pdb'; linking object as if no debug info
-SOIL.lib(SOIL.obj) : warning LNK4099: PDB 'SOIL.pdb' was not found with 'SOIL.lib(SOIL.obj)' or at 'C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games-Repo\GalagaOpenGL\Debug\SOIL.pdb'; linking object as if no debug info
-SOIL.lib(stb_image_aug.obj) : warning LNK4099: PDB 'SOIL.pdb' was not found with 'SOIL.lib(stb_image_aug.obj)' or at 'C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games-Repo\GalagaOpenGL\Debug\SOIL.pdb'; linking object as if no debug info
-  GalagaOpenGL.vcxproj -> C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games-Repo\GalagaOpenGL\Debug\GalagaOpenGL.exe
+﻿  Game.cpp
+C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games-Repo\GalagaOpenGL\Game.cpp(48,88): error C2664: 'PlayerObject::PlayerObject(PlayerObject &&)': cannot convert argument 2 from 'const glm::vec2' to 'Texture'
+C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games-Repo\GalagaOpenGL\Game.cpp(48,39): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games-Repo\GalagaOpenGL\PlayerObject.h(26,2): message : see declaration of 'PlayerObject::PlayerObject'
+C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games-Repo\GalagaOpenGL\Game.cpp(69,2): error C2065: 'player': undeclared identifier
