@@ -30,7 +30,7 @@ void Game::init() {
 	ResourceManager::LoadTexture("Resources/Textures/ship.png", GL_TRUE, "ship");
 
 	Text = new TextRenderer(this->Width, this->Height);
-	Text->Load("Resources/Fonts/ARCADEPI.TTF", 24);
+	Text->Load("Resources/Fonts/arial.ttf", 24);
 }
 
 void Game::ProcessInput(GLfloat dt) {
@@ -45,5 +45,5 @@ void Game::Render() {
 	//Renderer->DrawSprite(myTexture, glm::vec2(200, 200), glm::vec2(300, 400), 45.0f, glm::vec3(0.0f, 1.0f, 0.0f));
 	Renderer->DrawSprite(myTexture, glm::vec2(Width / 2 - 35, 500), glm::vec2(64, 64));
 
-	Text->RenderText("This is a test string", 5.0f, 5.0f, 1.0f);
+	Text->RenderText("Test String", 0, 0, 1.0f, glm::vec3(1.0f, 0.0f, 0.0f));
 }

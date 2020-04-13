@@ -36,9 +36,13 @@
     <ClInclude Include="Texture.h" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="Resources\Textures\awesomeface.png" />
+    <Image Include="Resources\Textures\ship - Copy.png" />
     <Image Include="Resources\Textures\ship.png">
       <DeploymentContent>false</DeploymentContent>
     </Image>
+    <Image Include="Resources\Textures\trianglefull.png" />
+    <Image Include="Resources\Textures\triangleold.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Shaders\SpriteFrag.fs">
@@ -47,6 +51,16 @@
     <None Include="Resources\Shaders\SpriteVert.vs">
       <DeploymentContent>false</DeploymentContent>
     </None>
+    <None Include="Resources\Shaders\textFragmentShader.fs" />
+    <None Include="Resources\Shaders\textVertexShader.vs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Resources\Fonts\ARCADEPI.TTF" />
+    <Font Include="Resources\Fonts\arial.ttf" />
+    <Font Include="Resources\Fonts\arialbd.ttf" />
+    <Font Include="Resources\Fonts\arialbi.ttf" />
+    <Font Include="Resources\Fonts\ariali.ttf" />
+    <Font Include="Resources\Fonts\ariblk.ttf" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -122,7 +136,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>opengl32.lib;glew32.lib;glfw3.lib;SOIL.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>freetype.lib;opengl32.lib;glew32.lib;glfw3.lib;SOIL.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\lib</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>

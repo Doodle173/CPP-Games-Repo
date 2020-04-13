@@ -13,6 +13,15 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Resource Files\Fonts">
+      <UniqueIdentifier>{00297afe-836e-407f-b062-bfc8984413c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders">
+      <UniqueIdentifier>{e679e637-6b21-4c10-86ff-61d687a5c24b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Textures">
+      <UniqueIdentifier>{c8bd389e-a10b-4db4-a29b-92cd33665f77}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game.cpp">
@@ -58,12 +67,54 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Resources\Textures\ship.png">
-      <Filter>Resource Files</Filter>
-    </Image>
+    <None Include="Resources\Shaders\SpriteFrag.fs">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="Resources\Shaders\SpriteVert.vs">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="Resources\Shaders\textFragmentShader.fs">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="Resources\Shaders\textVertexShader.vs">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Shaders\SpriteVert.vs" />
-    <None Include="Resources\Shaders\SpriteFrag.fs" />
+    <Font Include="Resources\Fonts\ariblk.ttf">
+      <Filter>Resource Files\Fonts</Filter>
+    </Font>
+    <Font Include="Resources\Fonts\ARCADEPI.TTF">
+      <Filter>Resource Files\Fonts</Filter>
+    </Font>
+    <Font Include="Resources\Fonts\arial.ttf">
+      <Filter>Resource Files\Fonts</Filter>
+    </Font>
+    <Font Include="Resources\Fonts\arialbd.ttf">
+      <Filter>Resource Files\Fonts</Filter>
+    </Font>
+    <Font Include="Resources\Fonts\arialbi.ttf">
+      <Filter>Resource Files\Fonts</Filter>
+    </Font>
+    <Font Include="Resources\Fonts\ariali.ttf">
+      <Filter>Resource Files\Fonts</Filter>
+    </Font>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\Textures\ship.png">
+      <Filter>Resource Files\Textures</Filter>
+    </Image>
+    <Image Include="Resources\Textures\triangleold.png">
+      <Filter>Resource Files\Textures</Filter>
+    </Image>
+    <Image Include="Resources\Textures\ship - Copy.png">
+      <Filter>Resource Files\Textures</Filter>
+    </Image>
+    <Image Include="Resources\Textures\trianglefull.png">
+      <Filter>Resource Files\Textures</Filter>
+    </Image>
+    <Image Include="Resources\Textures\awesomeface.png">
+      <Filter>Resource Files\Textures</Filter>
+    </Image>
   </ItemGroup>
 </Project>
