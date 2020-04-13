@@ -1,0 +1,2 @@
+C:/Users/Daniel/Desktop/Programming Things/C++ Projects/CPP-Games-Repo/GalagaOpenGL/Dependencies/include/glm/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/Daniel/Desktop/Programming Things/C++ Projects/CPP-Games-Repo/GalagaOpenGL/Dependencies/include/glm/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir

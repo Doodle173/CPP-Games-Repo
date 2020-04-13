@@ -1,0 +1,38 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"projectIndex" : 0,
+					"source" : "."
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Project"
+				}
+			],
+			"targets" : []
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Daniel/Desktop/Programming Things/C++ Projects/CPP-Games-Repo/GalagaOpenGL/Dependencies/include/glm/out/build/x64-Debug",
+		"source" : "C:/Users/Daniel/Desktop/Programming Things/C++ Projects/CPP-Games-Repo/GalagaOpenGL/Dependencies/include/glm"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}
