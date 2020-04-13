@@ -5,6 +5,7 @@
 #include<GLFW/glfw3.h>
 #include<glm/glm.hpp>
 #include<iostream>
+#include<string>
 
 //Game State Management
 enum GameState {
@@ -19,6 +20,11 @@ public:
 	GameState State;
 	GLboolean Keys[1024];
 	GLuint Width, Height;
+
+	int frameCounter = 0;
+	float currentTime = 0.0f;
+	float deltaGameTime = 0.0f;
+	float lastGameFrame = 0.0f;
 
 	//Game Constructor & Deconstructor
 	Game(GLuint width, GLuint height);

@@ -4,6 +4,7 @@
 
 #include "Game.h"
 #include "ResourceManager.h"
+#include "TextRenderer.h"
 
 
 //GLFW keyhandling declerations
@@ -15,6 +16,9 @@ const GLuint SCREEN_WIDTH = 800;
 const GLuint SCREEN_HEIGHT = 600;
 
 Game Galaga(SCREEN_WIDTH, SCREEN_HEIGHT);
+
+TextRenderer* fpsRenderer;
+
 
 int main(void)
 {
@@ -64,9 +68,13 @@ int main(void)
 
     Galaga.init();
 
+    fpsRenderer = new TextRenderer(SCREEN_WIDTH, SCREEN_HEIGHT);
+    fpsRenderer->Load("Resources/Fonts/ARCADEPI.TTF", 24);
+
     GLfloat deltaTime = 0.0f;
     GLfloat lastFrame = 0.0f;
-
+    float currentTime = 0.0f;
+    float frameCounter = 0.0f;
     //start game within Menu State
     Galaga.State = GAME_ACTIVE;
 
@@ -74,10 +82,21 @@ int main(void)
     while (!glfwWindowShouldClose(window))
     {
 
-        //calculate delta time
+        //calculate delta 
         GLfloat currentFrame = glfwGetTime();
         deltaTime = currentFrame - lastFrame;
         lastFrame = currentFrame;
+
+        currentTime += deltaTime;
+
+        float fps = frameCounter / currentTime;
+        if (currentTime >= 1) {
+            frameCounter = 0;
+            currentTime = 0;
+        }
+        frameCounter++;
+        
+        
         glfwPollEvents();
         //deltatime = 0.001f;
 
@@ -90,12 +109,15 @@ int main(void)
         //render
         glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
+
+        fpsRenderer->RenderText("FPS: " + std::to_string(fps), 0, 0, 1.0f, glm::vec3(1.0f, 0.0f, 0.0f));
         Galaga.Render();
 
         glfwSwapBuffers(window);
 
 
     }
+
     //delete all resources from resource manager
     ResourceManager::clear();
 

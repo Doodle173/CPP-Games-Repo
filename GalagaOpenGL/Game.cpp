@@ -8,6 +8,9 @@
 SpriteRenderer *Renderer;
 TextRenderer *Text;
 
+Texture ship; //texture of galaga ship
+Texture menu_selector; //menu object selector
+
 Game::Game(GLuint width, GLuint height) : State(GAME_ACTIVE), Keys(), Width(width), Height(height) {
 
 }
@@ -28,6 +31,7 @@ void Game::init() {
 	Renderer = new SpriteRenderer(myShader);
 
 	ResourceManager::LoadTexture("Resources/Textures/ship.png", GL_TRUE, "ship");
+	ResourceManager::LoadTexture("Resources/Textures/menu_selector.png", GL_TRUE, "menu_selector");
 
 	Text = new TextRenderer(this->Width, this->Height);
 	Text->Load("Resources/Fonts/ARCADEPI.TTF", 24);
@@ -40,10 +44,14 @@ void Game::Update(GLfloat dt) {
 }
 
 void Game::Render() {
-	Texture myTexture;
-	myTexture = ResourceManager::GetTexture("ship");
+	ship = ResourceManager::GetTexture("ship");
+	menu_selector = ResourceManager::GetTexture("menu_selector");
+
+	//sprite render property order:
+	//texture, position, size, rotation, color
+
 	//Renderer->DrawSprite(myTexture, glm::vec2(200, 200), glm::vec2(300, 400), 45.0f, glm::vec3(0.0f, 1.0f, 0.0f));
-	Renderer->DrawSprite(myTexture, glm::vec2(Width / 2 - 35, 500), glm::vec2(64, 64));
 
 	Text->RenderText("Test String", this->Width / 2 - 100.0f, this->Height / 2, 1.0f, glm::vec3(1.0f, 0.0f, 0.0f));
 }
+

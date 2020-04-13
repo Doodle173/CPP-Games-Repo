@@ -1,3 +1,3 @@
-﻿  Game.cpp
-Z:\ProgrammingStuff\CPP-Games-Repo\GalagaOpenGL\Game.cpp(48,73): warning C4244: 'argument': conversion from 'GLuint' to 'GLfloat', possible loss of data
+﻿  Main.cpp
+Z:\ProgrammingStuff\CPP-Games-Repo\GalagaOpenGL\Main.cpp(86,30): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
   GalagaOpenGL.vcxproj -> Z:\ProgrammingStuff\CPP-Games-Repo\GalagaOpenGL\Debug\GalagaOpenGL.exe
