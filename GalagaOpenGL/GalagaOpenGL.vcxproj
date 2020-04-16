@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="EnemyObject.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="PlayerObject.cpp" />
     <ClCompile Include="ProjectileObject.cpp" />
@@ -31,8 +31,8 @@
     <ClCompile Include="Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="EnemyObject.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="GameObject.h" />
     <ClInclude Include="PlayerObject.h" />
     <ClInclude Include="ProjectileObject.h" />
     <ClInclude Include="ResourceManager.h" />

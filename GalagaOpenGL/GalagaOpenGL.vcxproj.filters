@@ -50,12 +50,6 @@
     <ClCompile Include="PlayerObject.cpp">
       <Filter>Engine\Game\cpp</Filter>
     </ClCompile>
-    <ClCompile Include="EnemyObject.cpp">
-      <Filter>Engine\Game\cpp</Filter>
-    </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Engine\Game\cpp</Filter>
-    </ClCompile>
     <ClCompile Include="Shader.cpp">
       <Filter>Engine\Graphics\cpp</Filter>
     </ClCompile>
@@ -71,18 +65,18 @@
     <ClCompile Include="ProjectileObject.cpp">
       <Filter>Engine\Game\cpp</Filter>
     </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Engine\Game\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Engine\Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ResourceManager.h">
       <Filter>Engine\Game\header</Filter>
     </ClInclude>
-    <ClInclude Include="Game.h">
-      <Filter>Engine\Game\header</Filter>
-    </ClInclude>
     <ClInclude Include="PlayerObject.h">
-      <Filter>Engine\Game\header</Filter>
-    </ClInclude>
-    <ClInclude Include="EnemyObject.h">
       <Filter>Engine\Game\header</Filter>
     </ClInclude>
     <ClInclude Include="Texture.h">
@@ -99,6 +93,12 @@
     </ClInclude>
     <ClInclude Include="ProjectileObject.h">
       <Filter>Engine\Game\header</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Engine\Game\header</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Engine\Game</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -1,5 +1,3 @@
 ﻿  Game.cpp
-C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games-Repo\GalagaOpenGL\Game.cpp(48,88): error C2664: 'PlayerObject::PlayerObject(PlayerObject &&)': cannot convert argument 2 from 'const glm::vec2' to 'Texture'
-C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games-Repo\GalagaOpenGL\Game.cpp(48,39): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games-Repo\GalagaOpenGL\PlayerObject.h(26,2): message : see declaration of 'PlayerObject::PlayerObject'
-C:\Users\Daniel\Desktop\Programming Things\C++ Projects\CPP-Games-Repo\GalagaOpenGL\Game.cpp(69,2): error C2065: 'player': undeclared identifier
+Z:\ProgrammingStuff\CPP-Games-Repo\GalagaOpenGL\Game.cpp(83,22): warning C4305: '+=': truncation from 'double' to 'float'
+  GalagaOpenGL.vcxproj -> Z:\ProgrammingStuff\CPP-Games-Repo\GalagaOpenGL\Debug\GalagaOpenGL.exe

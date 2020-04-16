@@ -10,8 +10,11 @@
 //Game State Management
 enum GameState {
 	GAME_ACTIVE,
-	GAME_MENU
+	GAME_MENU,
+	GAME_PAUSE,
 };
+
+
 
 class Game
 {
@@ -21,10 +24,18 @@ public:
 	GLboolean Keys[1024];
 	GLuint Width, Height;
 
+	bool debugMode;
+
+	bool isPlayerFiring = false;
+
 	int frameCounter = 0;
+	int menu_object_selected;
+	int pause_menu_object_selected;
+
 	float currentTime = 0.0f;
 	float deltaGameTime = 0.0f;
 	float lastGameFrame = 0.0f;
+	float score = 0.000000f;
 
 	//Game Constructor & Deconstructor
 	Game(GLuint width, GLuint height);
@@ -37,6 +48,7 @@ public:
 	void Update(GLfloat dt);
 	void Render();
 
+	void resetScoreAndLives();
 
 private:
 };

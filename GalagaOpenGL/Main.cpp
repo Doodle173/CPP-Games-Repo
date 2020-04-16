@@ -6,7 +6,6 @@
 #include "ResourceManager.h"
 #include "TextRenderer.h"
 
-
 //GLFW keyhandling declerations
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
 
@@ -44,7 +43,7 @@ int main(void)
         return -1;
     }
     else {
-        std::cout << "GLFW & Window Initialized Properly.";
+        std::cout << "GLFW & Window Initialized Properly." << std::endl;
     }
 
     /* Make the window's context current */
@@ -76,7 +75,7 @@ int main(void)
     float currentTime = 0.0f;
     float frameCounter = 0.0f;
     //start game within Menu State
-    Galaga.State = GAME_ACTIVE;
+    Galaga.State = GAME_MENU;
 
     /* Loop until the user closes the window */
     while (!glfwWindowShouldClose(window))
@@ -131,15 +130,94 @@ int main(void)
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode) {
     //when press escape, set WindowShouldClose to True
-    if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
-        glfwSetWindowShouldClose(window, GL_TRUE);
+
+    if (Galaga.State == GAME_ACTIVE) {
+        if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
+            //pause game
+            Galaga.State = GAME_PAUSE;
+        }
     }
+
+    //main menu
+    if (Galaga.State == GAME_MENU) {
+        if (key == GLFW_KEY_DOWN && action == GLFW_PRESS) {
+            //go down in menu object list
+            Galaga.menu_object_selected += 1;
+
+            if (Galaga.menu_object_selected >= 2) {
+                Galaga.menu_object_selected = 2;
+            }
+            std::cout << Galaga.menu_object_selected << std::endl;
+        }
+
+        if (key == GLFW_KEY_UP && action == GLFW_PRESS) {
+            //go up in menu object list
+            Galaga.menu_object_selected -= 1;
+
+            if (Galaga.menu_object_selected <= 0) {
+                Galaga.menu_object_selected = 0;
+            }
+            std::cout << Galaga.menu_object_selected << std::endl;
+        }
+
+        if (key == GLFW_KEY_ENTER && action == GLFW_PRESS) {
+            //start game button
+            if (Galaga.menu_object_selected == 0) {
+                Galaga.State = GAME_ACTIVE;
+                std::cout << "Game Started" << std::endl;
+            }
+            if (Galaga.menu_object_selected == 1) {
+                std::cout << "Options menu not implemented yet" << std::endl;
+            }
+            //exit game button
+            if (Galaga.menu_object_selected == 2) {
+                glfwSetWindowShouldClose(window, GL_TRUE);
+                std::cout << "Exiting Game" << std::endl;
+            }
+        }
+
+    }
+
+    //pause menu
+    if (Galaga.State == GAME_PAUSE) {
+            if (key == GLFW_KEY_DOWN && action == GLFW_PRESS) {
+                //go down in menu object list
+                Galaga.pause_menu_object_selected += 1;
+
+                if (Galaga.pause_menu_object_selected >= 1) {
+                    Galaga.pause_menu_object_selected = 1;
+                }
+                std::cout << Galaga.pause_menu_object_selected << std::endl;
+            }
+
+            if (key == GLFW_KEY_UP && action == GLFW_PRESS) {
+                //go up in menu object list
+                Galaga.pause_menu_object_selected -= 1;
+
+                if (Galaga.pause_menu_object_selected <= 0) {
+                    Galaga.pause_menu_object_selected = 0;
+                }
+                std::cout << Galaga.pause_menu_object_selected << std::endl;
+            }
+
+            if (key == GLFW_KEY_ENTER && action == GLFW_PRESS) {
+                //continue button
+                if (Galaga.pause_menu_object_selected == 0) {
+                    Galaga.State = GAME_ACTIVE;
+                }
+                //return to main menu button
+                if (Galaga.pause_menu_object_selected == 1) {
+                    Galaga.State = GAME_MENU;
+                }
+            }
+    }
+
     if (key >= 0 && key < 1024) {
         if (action == GLFW_PRESS) {
             Galaga.Keys[key] = GL_TRUE;
         }
         else if(action == GLFW_RELEASE){
-            Galaga.Keys[key] = GL_FALSE;
+           Galaga.Keys[key] = GL_FALSE;
         }
     }
 }
